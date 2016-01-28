@@ -1,0 +1,7 @@
+{
+	"name"       : "Sitemap",
+	"version"    : "0.1",
+	"description": "A simple module to generate a sitemap.xml from the existing collections",
+	"homepage"   : "sitemap",
+	"license"    : "MIT"
+}

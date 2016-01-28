@@ -1,0 +1,24 @@
+RewriteEngine On
+
+Options +SymLinksIfOwnerMatch
+Options -Indexes
+
+AddDefaultCharset UTF-8
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+AddEncoding gzip svgz
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www.glogovetan.com [NC]
+RewriteRule ^(.*)$ http://glogovetan.com/$1 [L,R=301]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www.glogovetan.com [NC]
+RewriteRule ^(.*)$ https://glogovetan.com/$1 [L,R=301]
+
+RewriteRule ^sitemap.xml$ sitemap.php [L]
+RewriteRule ^robots.txt$ robots.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*)$ index.php [NC,L,QSA]

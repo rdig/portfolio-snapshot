@@ -1,0 +1,7 @@
+{
+	"name"       : "Robots",
+	"version"    : "0.1",
+	"description": "A simple module to generate a robots.txt file from the entries in the datastore",
+	"homepage"   : "robots",
+	"license"    : "MIT"
+}
